@@ -1,4 +1,10 @@
-import React, { useState, useRef, useMemo, useCallback } from "react";
+import React, {
+  useState,
+  useRef,
+  useMemo,
+  useCallback,
+  useEffect,
+} from "react";
 import PropTypes from "prop-types";
 
 import { useOnClickOutside, useToggle } from "../../hooks";
@@ -20,6 +26,10 @@ export default function AutoComplete({
 
   const displaySuggestions = useToggle();
   const [currFocusIdx, setCurrFocusIdx] = useState(-1);
+
+  useEffect(() => {
+    setCurrFocusIdx(-1);
+  }, [items]);
 
   useOnClickOutside(ref, displaySuggestions.setOff);
 
