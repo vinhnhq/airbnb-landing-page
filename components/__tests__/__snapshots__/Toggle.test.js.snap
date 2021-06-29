@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components --> Toggle should render correctly 1`] = `
+Array [
+  <input
+    checked={true}
+    className="input"
+    id="toggle-checkbox-id"
+    onChange={[Function]}
+    type="checkbox"
+  />,
+  <label
+    className="label"
+    htmlFor="toggle-checkbox-id"
+    style={
+      Object {
+        "background": "red",
+      }
+    }
+  >
+    <span
+      className="button"
+    />
+  </label>,
+]
+`;

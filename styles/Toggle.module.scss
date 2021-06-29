@@ -1,0 +1,46 @@
+.input {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+
+  &:checked + .label .button {
+    left: calc(100% - 1px);
+    transform: translateX(-100%);
+  }
+}
+
+.label {
+  background: grey;
+
+  display: flex;
+  cursor: pointer;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 36px;
+  height: 18px;
+  border-radius: 18px;
+
+  transition: background-color 0.2s;
+
+  &:active .button {
+    width: 24px;
+  }
+}
+
+.button {
+  content: "";
+  position: absolute;
+  top: 1px;
+  left: 1px;
+  width: 18px;
+  height: 16px;
+
+  border-radius: 16px;
+
+  transition: 0.2s;
+
+  background: white;
+  box-shadow: 0 0 2px 0 rgba(10, 10, 10, 0.29);
+}

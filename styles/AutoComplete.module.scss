@@ -1,0 +1,43 @@
+.wrapper {
+  display: block;
+}
+
+.input {
+  border: 1px solid gray;
+  padding: 0.5rem;
+  width: 600px;
+  font-size: large;
+  outline: none;
+  border-radius: 18px;
+  padding-left: 20px;
+}
+
+.suggestions {
+  border: solid 1px gray;
+  list-style: none;
+  margin-top: 10px;
+  max-height: 250px;
+  padding: 8px 0;
+  border-radius: 18px;
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  li {
+    padding: 8px 20px;
+    font-size: large;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: #ff5a5f;
+      cursor: pointer;
+    }
+  }
+}
+
+.focusSuggestion {
+  background-color: #ff5a5f;
+}
